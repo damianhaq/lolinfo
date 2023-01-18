@@ -20,7 +20,7 @@ const Champions = () => {
       <>
         <ChampionsHeader />
         {champions && (
-          <Box display={"flex"} flexWrap="wrap" gap={"20px"}>
+          <Box margin={"0 auto"} maxWidth={1390} padding={"30px"} display={"flex"} justifyContent="center" flexWrap="wrap" gap={"20px"}>
             {champions.map((el) => (
               <ChampionCard key={el.id} data={el} />
             ))}
