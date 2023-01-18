@@ -3,13 +3,16 @@ import { Box, Text } from "@chakra-ui/react";
 
 const Champion = ({ data }) => {
   return (
-    <Box
-      position={"relative"}
-      width={308}
-      height={560}
-      backgroundPosition={"center"}
-      backgroundImage={`url(http://ddragon.leagueoflegends.com/cdn/img/champion/loading/${data.id}_0.jpg)`}
-    >
+    <Box width={250} overflow={"hidden"} height={280} position={"relative"}>
+      <Box
+        position={"absolute"}
+        top={"-20px"}
+        left={"-20px"}
+        width={308}
+        height={560}
+        backgroundPosition={"center"}
+        backgroundImage={`url(http://ddragon.leagueoflegends.com/cdn/img/champion/loading/${data.id}_0.jpg)`}
+      ></Box>
       <Box
         position={"absolute"}
         bottom={"0"}
@@ -25,6 +28,7 @@ const Champion = ({ data }) => {
       >
         <p>{data.name}</p>
       </Box>
+      <Box top={-3} right={-3} position={"absolute"} transform={"rotate(45deg)"} width={6} height={6} backgroundColor={"white"}></Box>
     </Box>
   );
 };
