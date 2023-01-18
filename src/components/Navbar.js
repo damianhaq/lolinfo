@@ -1,16 +1,19 @@
+import { Box } from "@chakra-ui/react";
 import React from "react";
 import { Link } from "react-router-dom";
 import { navbar } from "../consts";
 
 const Navbar = () => {
   return (
-    <div>
+    <Box paddingLeft={"36px"} display={"flex"} alignItems="center" color={"#F9F9F9"} backgroundColor={"#111111"} height={"80px"}>
       {navbar.map((el) => (
-        <Link to={el.routing} key={el.name}>
-          {el.name}
-        </Link>
+        <Box height={"100%"} fontWeight={600} key={el.name}>
+          <Link style={{ height: "100%", padding: "0 20px", display: "flex", alignItems: "center" }} to={el.routing}>
+            {el.name}
+          </Link>
+        </Box>
       ))}
-    </div>
+    </Box>
   );
 };
 
