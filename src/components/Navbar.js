@@ -1,11 +1,14 @@
 import React from "react";
-import { navbarNames } from "../consts";
+import { Link } from "react-router-dom";
+import { navbar } from "../consts";
 
 const Navbar = () => {
   return (
     <div>
-      {navbarNames.map((el) => (
-        <a key={el}>{el}</a>
+      {navbar.map((el) => (
+        <Link to={el.routing} key={el.name}>
+          {el.name}
+        </Link>
       ))}
     </div>
   );

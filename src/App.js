@@ -1,13 +1,18 @@
-import Champions from "./components/champions/Champions";
+import { Route, Routes } from "react-router-dom";
+import Champions from "./pages/champions/Champions";
+import Home from "./pages/Home";
 import Navbar from "./components/Navbar";
-// import Testapi from "./components/Testapi";
+import Champion from "./pages/champions/champion/Champion";
 
 function App() {
   return (
     <div>
       <Navbar />
-      <Champions />
-      {/* <Testapi /> */}
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/champions" element={<Champions />} />
+        <Route path="/champions/:id" element={<Champion />} />
+      </Routes>
     </div>
   );
 }
