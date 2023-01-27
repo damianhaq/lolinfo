@@ -17,7 +17,7 @@ const Champions = () => {
 
   if (champions)
     return (
-      <>
+      <Box paddingTop={"10px"}>
         <ChampionsHeader />
         {champions && (
           <Box margin={"0 auto"} maxWidth={1390} padding={"30px"} display={"flex"} justifyContent="center" flexWrap="wrap" gap={"20px"}>
@@ -26,7 +26,7 @@ const Champions = () => {
             ))}
           </Box>
         )}
-      </>
+      </Box>
     );
 };
 

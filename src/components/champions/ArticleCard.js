@@ -3,13 +3,35 @@ import React from "react";
 
 const ArticleCard = () => {
   return (
-    <Flex role={"group"} alignItems={"center"} border={"1px solid #ACACAC"} width={"600px"} height={"150px"}>
+    <Flex
+      marginRight={"13px"}
+      backgroundColor={"white"}
+      role={"group"}
+      alignItems={"center"}
+      border={"1px solid #ACACAC"}
+      width={["100%", 450, 600]}
+      height={[100, 150]}
+      position={"relative"}
+      _after={{
+        content: "''",
+        width: "20px",
+        height: "20px",
+        borderBottom: "1px solid #ACACAC",
+        position: "absolute",
+        right: "-2.5",
+        top: "-2.5",
+        transform: "rotate(45deg)",
+
+        backgroundColor: "#F8F8F8",
+      }}
+    >
       <Box
         _before={{ left: "-1px", position: "absolute", zIndex: "1", display: "inline-block", content: "''", height: "100%", width: "1px", backgroundColor: "#ACACAC" }}
         pos={"relative"}
-        height={"128px"}
-        width={"219px"}
+        height={[86, 128]}
+        width={[86, 219]}
         flexShrink={"0"}
+        flexGrow={"1"}
       >
         <Box
           pos={"absolute"}
@@ -23,10 +45,10 @@ const ArticleCard = () => {
         />
       </Box>
       <Box fontWeight={"700"} padding={"10px"}>
-        <Text color={"rgb(11 198 227)"} fontSize={"10px"}>
+        <Text marginBottom={"8px"} color={"rgb(11 198 227)"} fontSize={"10px"}>
           GAME UPDATES
         </Text>
-        <Text fontStyle={"italic"} fontSize={"26px"}>
+        <Text lineHeight="1.5rem" fontStyle={"italic"} fontSize={[14, 26]}>
           K'SANTE CHAMPION SPOTLIGHT
         </Text>
       </Box>
