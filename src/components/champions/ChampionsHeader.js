@@ -1,5 +1,6 @@
 import { Box, Text } from "@chakra-ui/react";
 import React from "react";
+import VerticalSectionTitle from "../VerticalSectionTitle";
 import ArticleCard from "./ArticleCard";
 
 const ChampionsHeader = () => {
@@ -7,20 +8,7 @@ const ChampionsHeader = () => {
     <Box paddingBottom={"60px"} position={"relative"}>
       <Box position={"absolute"} zIndex={"-1"} top="0" width={"100%"} height={295} backgroundColor={"#F8F8F8"}></Box>
       <Box display={"flex"} alignItems={"center"} padding={"20px 0"} height={200}>
-        <Text
-          letterSpacing={"0.2rem"}
-          fontSize={"10px"}
-          textTransform={"uppercase"}
-          transformOrigin={"center"}
-          fontWeight={"600"}
-          transform={"rotate(-90deg)"}
-          display={"flex"}
-          alignItems={"center"}
-          _after={{ content: "''", height: "1px", width: "15px", backgroundColor: "black", display: "inline-block" }}
-        >
-          highligts
-        </Text>
-
+        <VerticalSectionTitle color={"#010101"} title={"HIGHLIGHTS"} />
         <ArticleCard />
       </Box>
       <Box padding={"10px 0"} margin="0 auto" textAlign={"center"}>
