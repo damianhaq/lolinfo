@@ -4,7 +4,7 @@ import React from "react";
 const ArticleCard = () => {
   return (
     <Flex
-      marginRight={"13px"}
+      margin={"0 13px"}
       backgroundColor={"white"}
       role={"group"}
       alignItems={"center"}

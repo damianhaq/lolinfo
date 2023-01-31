@@ -7,7 +7,7 @@ const ChampionsHeader = () => {
   return (
     <Box paddingBottom={"60px"} position={"relative"}>
       <Box position={"absolute"} zIndex={"-1"} top="0" width={"100%"} height={295} backgroundColor={"#F8F8F8"}></Box>
-      <Box display={"flex"} alignItems={"center"} padding={"20px 0"} height={200}>
+      <Box position={"relative"} display={"flex"} alignItems={"center"} padding={"20px 0"} height={200}>
         <VerticalSectionTitle color={"#010101"} title={"HIGHLIGHTS"} />
         <ArticleCard />
       </Box>

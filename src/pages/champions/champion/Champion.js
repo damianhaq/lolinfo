@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
 import Overview from "../../../components/champions/champion/Overview";
+import { Box } from "@chakra-ui/react";
 
 const Champion = () => {
   const { id } = useParams();
@@ -16,12 +17,9 @@ const Champion = () => {
 
   if (champion)
     return (
-      <div>
+      <Box backgroundColor={"#000913"}>
         <Overview data={champion} />
-
-        {/* <p>{champion[0].title}</p> */}
-        {/* <img src={`http://ddragon.leagueoflegends.com/cdn/img/champion/splash/${id}_0.jpg`} alt="splashart" /> */}
-      </div>
+      </Box>
     );
 
   return <p>Loading</p>;

@@ -3,7 +3,7 @@ import { Text, Box } from "@chakra-ui/react";
 
 const VerticalSectionTitle = ({ title, color }) => {
   return (
-    <Box display={"flex"} alignItems={"center"} margin={"10px"}>
+    <Box height={"100%"} display={"flex"} alignItems={"center"} margin={"10px"} position={["absolute", "relative"]}>
       <Text
         fontSize={"10px"}
         fontWeight={"600"}
